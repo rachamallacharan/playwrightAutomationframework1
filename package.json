@@ -1,0 +1,28 @@
+{
+  "name": "playwrightautomation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "cross-env ENV=dev npx playwright test",
+    "sit": "cross-env ENV=sit npx playwright test",
+    "uat": "cross-env ENV=uat npx playwright test",
+    "test:bdd": "bddgen && playwright test",
+    "test:headed": "bddgen && playwright test --headed",
+    "test:chromium": "bddgen && playwright test --project=chromium",
+    "test:chromium:headed": "bddgen && playwright test --project=chromium --headed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^26.2.0",
+    "cross-env": "^10.1.0",
+    "playwright-bdd": "^9.2.1"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.5"
+  }
+}
